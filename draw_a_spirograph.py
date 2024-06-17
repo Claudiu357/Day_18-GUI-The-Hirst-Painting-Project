@@ -1,14 +1,19 @@
 from turtle import Turtle, Screen
 import random
 
-trutle = Turtle()
-trutle.speed("fastest")
+
+def draw_a_spirograph(t):
+    t.speed("fastest")
+    colors = ["red", "yellow", "pink", "green", "purple", "orange", "blue"]
+    heading = t.heading()
+    for _ in range(37):
+        t.circle(100)
+        t.color(random.choice(colors))
+        t.setheading(heading)
+        heading += 10
+
+turtle = Turtle()
 screen = Screen()
-colors = ["red", "yellow", "pink", "green", "purple", "orange", "blue"]
-heading = trutle.heading()
-for _ in range(37):
-    trutle.circle(100)
-    trutle.color(random.choice(colors))
-    trutle.setheading(heading)
-    heading += 10
+draw_a_spirograph(turtle)
 screen.exitonclick()
+

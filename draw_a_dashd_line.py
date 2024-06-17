@@ -1,11 +1,15 @@
 from turtle import Turtle, Screen
 
+
+def draw_a_dashed_line(t):
+    for _ in range(15):
+        t.forward(10)
+        t.penup()
+        t.forward(10)
+        t.pendown()
+
 turtle = Turtle()
 screen = Screen()
 
-for _ in range(15):
-    turtle.forward(10)
-    turtle.penup()
-    turtle.forward(10)
-    turtle.pendown()
+draw_a_dashed_line(turtle)
 screen.exitonclick()
